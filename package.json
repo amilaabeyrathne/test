@@ -1,0 +1,17 @@
+{
+  "name": "account-management-fullstack-level-2",
+  "version": "1.0.0",
+  "scripts": {
+    "build:backend": "dotnet build app-backend/backend.sln",
+    "build:frontend": "cd app-frontend && npm install && npm run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "start:backend": "dotnet run --project app-backend/backend.WebApi/Backend.WebApi.csproj",
+    "start:frontend": "cd app-frontend && npm run start",
+    "start": "npm run start:backend & npm run start:frontend",
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^15.6.0",
+    "vite-plugin-mkcert": "^1.17.9"
+  }
+}
